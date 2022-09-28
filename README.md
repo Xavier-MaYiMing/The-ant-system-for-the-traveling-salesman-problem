@@ -38,9 +38,9 @@ if __name__ == '__main__':
 
 ##### Output:
 
-![convergence curve](C:\Users\dell\Desktop\研究生\个人算法主页\The ant system for the traveling salesman problem\convergence curve.png)
+![](https://github.com/Xavier-MaYiMing/The-ant-system-for-the-traveling-salesman-problem/blob/main/TSP%20result.png)
 
-![TSP result](C:\Users\dell\Desktop\研究生\个人算法主页\The ant system for the traveling salesman problem\TSP result.png)
+![](https://github.com/Xavier-MaYiMing/The-ant-system-for-the-traveling-salesman-problem/blob/main/Convergence%20curve.png)
 
 ```python
 {
