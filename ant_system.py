@@ -48,20 +48,6 @@ def construct_path(dis, pheromone, alpha, beta):
     return path
 
 
-def nearest_neighbor_heuristic(distance):
-    # Reference: Rosenkrantz D J, Stearns R E, Lewis, II P M. An analysis of several heuristics for the traveling salesman problem[J]. SIAM Journal on Computing, 1977, 6(3): 563-581.
-    path = [i for i in range(len(distance))]
-    length = 0
-    cur_node = path[random.randint(0, len(path) - 1)]
-    first_node = cur_node
-    for i in range(len(distance) - 1):
-        node = path.pop(random.randint(0, len(path) - 1))
-        length += distance[cur_node][node]
-        cur_node = node
-    length += distance[cur_node][first_node]
-    return length
-
-
 def main(coord_x, coord_y, pop, iter, alpha, beta, pho, Q):
     """
     The main function
@@ -83,7 +69,6 @@ def main(coord_x, coord_y, pop, iter, alpha, beta, pho, Q):
             temp_dis = math.sqrt((coord_x[i] - coord_x[j]) ** 2 + (coord_y[i] - coord_y[j]) ** 2)
             dis[i][j] = temp_dis
             dis[j][i] = temp_dis
-    tau0 = 1 / (nearest_neighbor_heuristic(dis) * city_num)
     pheromone = [[1 for _ in range(city_num)] for _ in range(city_num)]
     iter_best = []  # the shortest path of each iteration
     best_path = []
