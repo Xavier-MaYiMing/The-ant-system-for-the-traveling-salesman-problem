@@ -109,7 +109,6 @@ def main(coord_x, coord_y, pop, iter, alpha, beta, pho, Q):
     plt.plot(x, iter_best, linewidth=2, color='blue')
     plt.xlabel("Iterations")
     plt.ylabel('Global optimal value')
-    plt.savefig("D://12.png")
     plt.show()
 
     plt.figure()
@@ -118,7 +117,6 @@ def main(coord_x, coord_y, pop, iter, alpha, beta, pho, Q):
         temp_x = [coord_x[best_path[i]], coord_x[best_path[i + 1]]]
         temp_y = [coord_y[best_path[i]], coord_y[best_path[i + 1]]]
         plt.plot(temp_x, temp_y, color='blue')
-    plt.savefig("D://13.png")
     plt.show()
     return {'Best tour': best_path, 'Shortest length': best_length}
 
